@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1C1C"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="210dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp">
+
+            <GridLayout
+                android:id="@+id/gridButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="4">
+
+                <Button
+                    android:id="@+id/bhex"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="cursive"
+                    android:onClick="formatColor"
+                    android:text="HEX"
+                    android:textColor="#F3F3F1"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/boct"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="cursive"
+                    android:onClick="formatColor"
+                    android:text="OCT"
+                    android:textColor="#F3F3F1"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/bdec"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="cursive"
+                    android:onClick="formatColor"
+                    android:text="DEC"
+                    android:textColor="#F3F3F1"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/bbin"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="cursive"
+                    android:onClick="formatColor"
+                    android:text="BIN"
+                    android:textColor="#F3F3F1"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/gridButton"
+                android:columnCount="1"
+                android:rowCount="4">
+
+                <EditText
+                    android:id="@+id/editHex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_toRightOf="@+id/bhex"
+                    android:background="#D4ECEB"
+                    android:fontFamily="sans-serif-thin"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editOct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@+id/editHex"
+                    android:layout_toRightOf="@+id/boct"
+                    android:background="#B9ECB8"
+                    android:fontFamily="sans-serif-thin"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editDec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@+id/editOct"
+                    android:layout_toRightOf="@+id/bdec"
+                    android:background="#B8C3EC"
+                    android:fontFamily="sans-serif-thin"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editBin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@+id/editDec"
+                    android:layout_toRightOf="@+id/bbin"
+                    android:background="#E7A6E6"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </GridLayout>
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/gridGate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:columnCount="4"
+            android:rowCount="1">
+
+            <Button
+                android:id="@+id/band"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#676D85"
+                android:onClick="onClickOperation"
+                android:text="AND" />
+
+            <Button
+                android:id="@+id/bor"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#676D85"
+                android:onClick="onClickOperation"
+                android:text="OR" />
+
+            <Button
+                android:id="@+id/bnor"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#676D85"
+                android:onClick="onClickOperation"
+                android:text="NOR" />
+
+            <Button
+                android:id="@+id/bxor"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#676D85"
+                android:onClick="onClickOperation"
+                android:text="XOR" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/gridAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="fill"
+            android:columnCount="6"
+            android:orientation="horizontal"
+            android:rowCount="1">
+
+            <Button
+                android:id="@+id/ba"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#E595FA"
+                android:onClick="onClickDigits"
+                android:text="A"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/bb"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#E595FA"
+                android:onClick="onClickDigits"
+                android:text="B"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/bc"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#E595FA"
+                android:onClick="onClickDigits"
+                android:text="C"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/bd"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#E595FA"
+                android:onClick="onClickDigits"
+                android:text="D"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/be"
+                style="@android:style/Widget.Holo.Button.Small"
+
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#E595FA"
+                android:onClick="onClickDigits"
+                android:text="E"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/bf"
+                style="@android:style/Widget.Holo.Button.Small"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#E595FA"
+                android:onClick="onClickDigits"
+                android:text="F"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/gridKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_gravity="fill"
+            android:columnCount="5"
+            android:rowCount="4">
+
+            <Button
+                android:id="@+id/bseven"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="7"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/beight"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="8"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bnine"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="9"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bdel"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#7646D8"
+                android:onClick="onClickDel"
+                android:text="DEL"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/bce"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#199EC7"
+                android:onClick="onClickCE"
+                android:text="CE"
+                android:textColor="#FAF9FA"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/bfour"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="4"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bfive"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:onClick="onClickDigits"
+                android:backgroundTint="#83C584"
+                android:text="5"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bsix"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="6"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/badd"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#EEB976"
+                android:text="+"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp"
+                android:onClick="onClickOperation" />
+
+            <Button
+                android:id="@+id/bsub"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#EEB976"
+                android:onClick="onClickOperation"
+                android:text="-"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bone"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="1"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btwo"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="2"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bthree"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:onClick="onClickDigits"
+                android:text="3"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bmul"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#EEB976"
+                android:onClick="onClickOperation"
+                android:text="*"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bdiv"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#EEB976"
+                android:onClick="onClickOperation"
+                android:text="/"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bhelp"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:text="?"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bzero"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#83C584"
+                android:text="0"
+                android:textColor="#FAF9FA"
+                android:textSize="30sp"
+                android:onClick="onClickDigits" />
+
+            <Button
+                android:id="@+id/bequal"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_rowWeight="1"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#DF5754"
+                android:onClick="onClickEqual"
+                android:text="="
+                android:textColor="#FAF9FA"
+                android:textSize="30sp" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/extra"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BEA25D" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
